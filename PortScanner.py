@@ -16,7 +16,7 @@ response.close()
 for port in range(65536):                                            #For each port creates a socket,then attempts connection to the target ip (sys.argv[0](first argument) in Command Prompt)
    try:
      client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-     client_socket.settimeout(0.3)                                   #Socket timeout to prevent socket hanging 
+     client_socket.settimeout(0.2)                                   #Socket timeout to prevent socket hanging 
      client_socket.connect((target_ip, port))
 
      print(f"Port {port} is open and awaiting connection")
